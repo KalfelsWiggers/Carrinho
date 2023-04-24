@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MERCADO </title>
+    <style>
+        .carrinho
+        {
+            width: 430px;
+            height: 430px;
+            position: absolute;
+            background-color: rgb(94, 248, 63);
+            left: 500px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    ESCOLHA SEU PRODUTO E A QUANTIDADE:
+
+    <br> <br>
+
+    <img onclick="Adicionar('Alface',1.00,'qtde1');" src="alface.jpg" width="100px">  
+    <input type="number" id="qtde1"> 
+
+    <br>
+
+    <img onclick="Adicionar('Batata',2.00,'qtde2');" src="batata.jpg" width="100px">
+    <input type="number" id="qtde2"> 
+    
+
+    <br>
+
+    <img onclick="Adicionar('Chocolate',5.00,'qtde3');" src="chocolate.jpg" width="100px">   
+    <input type="number" id="qtde3">
+
+    <br>
+
+    <img onclick="Adicionar('Ovo',10.00,'qtde4');" src="ovo.jpg" width="100px"> 
+    <input type="number" id="qtde4"> 
+
+    <div class="carrinho" id="carrinho"> </div>
+
+</body>
+<script>
+    function Adicionar(nome,preco,ID)
+    {
+        Q = document.getElementById(ID).value
+        if (Q>0)
+        {
+            carrinho.innerHTML += nome + " Quantidade: " + Q + " Preço = R$" + (preco*Q) + "<br>"
+        }
+    }
+</script>
+</html>
